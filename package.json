@@ -2,7 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo 'Привет!'",
     "check": "prettier --check './**/*.{pug,scss,html,css,js}'",
