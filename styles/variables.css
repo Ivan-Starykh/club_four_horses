@@ -1,0 +1,21 @@
+:root {
+  --main-font: 'GolosText', sans-serif;
+  --accent-font: 'Merriweather', serif;
+  --main-font-size: 18px;
+  --alt-font-size: 14px;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  --themes-background: #fff;
+  --themes-main-color: #000;
+  --hover-color: #fff;
+  --hover-background: #fff;
+  --contour-color: #000;
+  --main-fill-color: rgb(255 0 0 / 100%);
+  --background-image: repeating-linear-gradient(
+      to left,
+      transparent 0 2px,
+      #d3d3d3 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, transparent 0 2px, #d3d3d3 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+}

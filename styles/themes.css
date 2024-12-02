@@ -1,0 +1,58 @@
+:root.theme-dark {
+  --main-font-weight: 465;
+  --accent-font-weight: 785;
+  --themes-background: #000;
+  --themes-main-color: #00cc14;
+  --hover-color: #fff;
+  --hover-background: #00cc14;
+  --contour-color: #00cc14;
+  --background-image: repeating-linear-gradient(
+      to left,
+      transparent 0 2px,
+      #000 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, transparent 0 2px, #000 2px 4px),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306);
+}
+
+:root.theme-light {
+  --themes-background: #fff;
+  --hover-color: #fff;
+  --hover-background: #fff;
+  --themes-main-color: #000;
+  --contour-color: #000;
+  --background-image: repeating-linear-gradient(
+      to left,
+      transparent 0 2px,
+      #d3d3d3 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, transparent 0 2px, #d3d3d3 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-weight: 465;
+    --accent-font-weight: 785;
+    --themes-background: #000;
+    --themes-main-color: #00cc14;
+    --hover-color: #fff;
+    --hover-background: #00cc14;
+    --contour-color: #00cc14;
+    --background-image: repeating-linear-gradient(
+        to left,
+        transparent 0 2px,
+        #000 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, transparent 0 2px, #000 2px 4px),
+      linear-gradient(to bottom, #007f0c 0.01%, #004306);
+  }
+
+  .main-card-title {
+    font-variation-settings: 'wght' 785, 'wdth' 110, 'opsz' 0;
+  }
+
+  .card__text {
+    font-variation-settings: 'wght' 465, 'wdth' 110, 'opsz' 0;
+  }
+}
