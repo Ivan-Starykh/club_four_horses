@@ -1039,8 +1039,8 @@ margin-left: -176px;
   /* Трек карусели */
   .carousel-track_mobile {
     display: flex; /* Горизонтальное расположение карточек */
-		overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Анимация переключения */
+		/* overflow: hidden; */
+    transition: transform 0.5s ease-in-out; /* Анимация переключения */
   }
 
   /* Карточки */
@@ -1056,7 +1056,7 @@ margin-left: -176px;
     padding-left: 20px;
     padding-top: 32px;
     gap: 24px;
-    margin-right: 15px; /* Отступ между карточками */
+    margin-right: 30px; /* Отступ между карточками */
     flex-shrink: 0;
   }
 
@@ -1144,7 +1144,7 @@ max-width: 20.8%;
     width: 100%;
     height: 36px;
     gap: 16px;
-    margin-left: 4px;
+    margin-left: -4px;
   }
 
   /* Контейнер управления каруселью */
