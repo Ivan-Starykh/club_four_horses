@@ -32,6 +32,8 @@ function showNextCard() {
   updateStatus();
 }
 
+
+
 function showPrevCard() {
   const lastCard = cards.pop();
   cards.unshift(lastCard);
@@ -67,8 +69,8 @@ function updateIndicators() {
 
 // Функция для обновления смещения карусели
 function updateCarousel() {
-  const offset = -currentIndexM * 100; // Смещение для показа текущей карточки
-  trackM.style.transform = `translateY(${offset}%)`;
+  const offset = -currentIndexM * 100 / 5; // Смещение для показа текущей карточки
+  trackM.style.transform = `translateX(${offset}%)`;
   updateButtons();
 }
 
@@ -101,10 +103,6 @@ nextButtonM.addEventListener('click', () => {
   }
 });
 
-// Инициализация
-// updateCarousel();
-// updateIndicators();
-
 // Инициализация карусели
 function initCarousel() {
   currentIndexM = 0; // Убедимся, что начальный индекс установлен
@@ -115,3 +113,4 @@ function initCarousel() {
 
 // Запуск карусели при загрузке страницы
 initCarousel();
+

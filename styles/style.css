@@ -2,11 +2,18 @@ header {
   background-color: #e9ded4;
   color: #313131;
   text-align: center;
-  position: relative;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  
+  /* width: 100vw; */
+	width: 100%;
+  /* margin: 0;
+  padding: 0; */
   overflow: hidden;
+}
+
+.header-container {
+	max-width: 1366px;
+	background-color: #e9ded4;
+	margin: 0 auto;
 }
 
 .logo-container {
@@ -17,6 +24,7 @@ header {
   width: 100%;
   max-height: 36px;
   padding-inline-start: 72px;
+	position: relative;
 }
 
 .logo-text {
@@ -161,9 +169,9 @@ section .section-event {
 .title-support {
   display: flex;
   flex-direction: column;
-  padding-inline-start: 72px;
+  padding-inline-start: 5.3%;
   font-size: 36px;
-  min-width: 840px;
+  min-width: 40%;
   gap: 3px;
 }
 
@@ -222,6 +230,10 @@ section .section-event {
 
 .right h3 {
   text-transform: uppercase;
+}
+
+.right .title-grid .new-line {
+	letter-spacing: 0.1px;
 }
 
 .right table {
@@ -616,15 +628,8 @@ td + th::before {
   height: 880px;
   position: absolute;
   z-index: 0;
-
-  /* Позиционирование: адаптивное под экран */
-  top: clamp(
-    -155px,
-    -11.6vw,
-    -200px
-  ); /* Рассчитано для отзывчивого размещения (привязка к размеру круга) */
-
-  right: clamp(-77px, -6.9vw, -150px); /* Аналогично top */
+  top: -22%;
+  left: 41.7%;
 }
 
 .circle text {
@@ -662,7 +667,7 @@ td + th::before {
 .marquee {
   display: flex;
   align-items: center;
-  overflow: hidden; /* Скрываем все, что выходит за пределы */
+  /* overflow: hidden; Скрываем все, что выходит за пределы */
   white-space: nowrap;
   background-color: #ff5722;
   color: #fff;
@@ -671,6 +676,7 @@ td + th::before {
   text-transform: uppercase;
   font-size: 1.375rem;
   max-height: 60px;
+	min-width: 1980px;
 }
 
 .marquee span {
@@ -726,8 +732,11 @@ footer {
   line-height: 1.3;
 }
 
+/* ============================================================= */
 /* Отзывчивость для планшетов */
-@media (width <= 768px) {
+/* ============================================================= */
+
+@media (max-width: 768px) {
   .wrapper {
     padding-inline-start: 72px;
   }
@@ -812,7 +821,8 @@ footer {
     width: 395px;
     height: 395px;
     top: 361px;
-    right: -1px;
+    right: 1px;
+margin-left: -176px;
   }
 
   .marquee {
@@ -854,12 +864,12 @@ footer {
   .container-grid {
     display: flex; /* Изменяем на flex */
     flex-direction: column; /* Располагаем блоки вертикально */
-    gap: 35px;
+    gap: 22px;
     padding-top: 343px;
   }
 
   .left {
-    min-height: 402px;
+    min-height: 414px;
     min-width: 375px;
     margin-left: -44px;
   }
@@ -873,7 +883,7 @@ footer {
     font-size: 28px;
   }
 
-  .right new-line {
+  .right .new-line {
     padding-right: 14px;
   }
 
@@ -972,7 +982,7 @@ footer {
   }
 
   .transformation-steps-container {
-    min-width: 365px;
+    max-width: 365px;
   }
 
   .big-header {
@@ -1019,7 +1029,7 @@ footer {
     display: flex;
     margin: 0 auto;
     margin-left: 20px;
-    margin-top: 123px;
+    margin-top: 124px;
     overflow: hidden; /* Скрываем карточки за пределами */
     background-color: #f9f9f9;
     width: 100%;
@@ -1029,6 +1039,7 @@ footer {
   /* Трек карусели */
   .carousel-track_mobile {
     display: flex; /* Горизонтальное расположение карточек */
+		overflow: hidden;
     transition: transform 0.3s ease-in-out; /* Анимация переключения */
   }
 
@@ -1087,6 +1098,10 @@ footer {
     align-items: flex-start;
     gap: 16px; /* Расстояние между номером и текстом */
   }
+
+	.carousel-controls_mobile-wrapper {
+max-width: 20.8%;
+	}
 
   .card_mobile-wrapper-first-raw {
     padding-bottom: 3px;
@@ -1261,4 +1276,46 @@ footer {
   .container-footer p {
     line-height: 120%;
   }
+}
+
+/* ========================================================== */
+@media (min-width: 1440px) {
+	.circle {
+		top: -22%;
+		left: 43.8%;
+	}
+
+.title-support {
+	padding-left: 18.1%;
+	min-width: 60%;
+}
+
+.container-grid {
+	padding-inline-end: 18.1%;
+	padding-left: 16.8%;
+}
+
+.section-transformation-steps {
+	padding-inline-end: 18.4%;
+	padding-inline-start: 14.4%;
+}
+
+.section-carousel {
+	max-width: 82.2%;
+padding-inline-start: 14.5%;
+overflow: hidden;
+}
+
+.header-with-controls {
+	width: 104%;
+}
+
+.carousel {
+	flex: 0 0 33.33%;
+	gap: 19px;
+}
+
+.footer-info .container-footer {
+padding-left: 3%; 
+}
 }
